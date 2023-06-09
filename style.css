@@ -23,6 +23,9 @@ p{
   margin-bottom: 1rem;
   position: relative;
 }
+.contador:hover .buttons{
+  opacity: 1;
+}
 #btn-adicionar{
   position: fixed;
   top: 1rem;
@@ -150,4 +153,6 @@ p.data{
   right: 20px;
   flex-direction: column;
   gap: 10px;
+  opacity: 0;
+  transition: opacity .3s;
 }
