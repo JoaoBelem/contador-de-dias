@@ -1,0 +1,153 @@
+:root{
+  font-family: sans-serif;
+}
+body{
+  background-color: rgb(202, 208, 211);
+  margin: 1rem;
+}
+h2{
+  margin: 0;
+  margin-bottom: 1rem;
+}
+p{
+  margin: 0;
+}
+.contador{
+  /* border: 2px solid #000; */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,.3);
+  padding: 20px;
+  padding-right: 80px;
+  width: fit-content;
+  margin-bottom: 1rem;
+  position: relative;
+}
+#btn-adicionar{
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  z-index: 10;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 100%;
+  width: 70px;
+}
+#btn-deletar{
+  position: fixed;
+  top: 1rem;
+  right: 6rem;
+  font-size: 1.5rem;
+  z-index: 10;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 100%;
+  width: 70px;
+}
+#btn-adicionar,  #btn-deletar, .buttons img{
+  -webkit-user-drag: none;
+  user-select: none;
+}
+#tela-adicionar{
+  display: none;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,.3);
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+}
+#tela-adicionar.show{
+  display: flex;
+}
+#tela-adicionar #tela{
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 6px;
+}
+#tela form{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px 0;
+}
+#tela form button{
+  grid-column: span 2;
+}
+#invalido{
+  color: red;
+  font-weight: bold;
+  grid-column: span 2;
+  text-align: center;
+  margin: .2rem 0;
+  border: 2px solid red;
+  padding: .3rem;
+  display: none;
+}
+#invalido.show{
+  display: block;
+}
+.error{
+  border-color: red;
+}
+#tela-editar{
+  display: none;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,.3);
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+}
+#tela-editar.show{
+  display: flex;
+}
+#tela-editar #tela{
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 6px;
+}
+form textarea{
+  resize: none;
+}
+p.data{
+  margin-bottom: .5rem;
+
+}
+@media (max-width: 700px){
+  #btn-adicionar, #btn-deletar{
+    top: auto;
+    bottom: 1rem;
+  }
+  section#contadores{
+    margin-bottom: 80px;
+  }
+}
+.delete{
+  width: 40px;
+  cursor: pointer;
+  border-radius: 100%;
+}
+.edit{
+  width: 40px;
+  cursor: pointer;
+  border-radius: 100%;
+}
+.buttons{
+  display: flex;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  flex-direction: column;
+  gap: 10px;
+}
