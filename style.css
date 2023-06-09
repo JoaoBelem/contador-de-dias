@@ -135,6 +135,9 @@ p.data{
   section#contadores{
     margin-bottom: 80px;
   }
+  .contador .buttons{
+    opacity: 1;
+  }
 }
 .delete{
   width: 40px;
