@@ -19,12 +19,11 @@ p{
 }
 /* Estilo do contador */
 .contador{
-  /* border: 2px solid #000; */
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0,0,0,.3);
   padding: 20px;
-  padding-right: 80px;
+  padding-right: 7rem;
   width: fit-content;
   margin-bottom: 1rem;
   position: relative;
@@ -63,7 +62,7 @@ p{
   user-select: none;
 }
 .delete, .edit{
-  width: 30px;
+  width: 2rem;
   cursor: pointer;
   border-radius: 100%;
 }
@@ -72,7 +71,6 @@ p{
   position: absolute;
   top: 1rem;
   right: 1rem;
-  flex-direction: column;
   gap: .5rem;
   opacity: 0;
   transition: opacity .3s;

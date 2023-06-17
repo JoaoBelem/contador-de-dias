@@ -1,4 +1,4 @@
-import CriarContador from "./criarContador.js";
+import CriarContador from './criarContador.js';
 
 export default function readInfo() {
   const contadoresSection = document.getElementById('contadores');
@@ -9,5 +9,5 @@ export default function readInfo() {
   local.forEach((item) => {
     const itemReal = item.split('|');
     contadoresSection.appendChild(CriarContador(itemReal[0], itemReal[1], itemReal[2]));
-  })
+  });
 }

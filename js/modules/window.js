@@ -9,7 +9,6 @@ import StorageInfo from './storageInfo.js';
 
 export default class CriarWindow {
   constructor({ ...args }) {
-    console.log(args);
     this.openBtn = args.openBtn;
     this.windowElement = args.windowElement;
     this.submitBtn = args.submitBtn;
@@ -48,7 +47,9 @@ export default class CriarWindow {
     this.windowElement.addEventListener('click', this.handleWindowClasses);
     this.submitBtn.addEventListener('click', this.handleSubmit);
 
-    this.firstAction(this.openBtn);
+    if (this.firstAction) {
+      this.firstAction(this.openBtn);
+    }
   }
 
   // Torna a window não visível

@@ -27,7 +27,6 @@ const telaAdicionar = new CriarWindow({
 
   requiredInputs: ['#title', '#date'],
   action() {
-    console.log('a');
     const id = this.contadoresSection.childElementCount;
     this.storageInfo.save(`${this.formElement.title.value}|${this.formElement.date.value}|${this.formElement.description.value}|${id}\\`);
 
