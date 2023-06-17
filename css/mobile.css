@@ -1,0 +1,13 @@
+@media (max-width: 700px){
+  #btn-adicionar, #btn-deletar{
+    top: auto;
+    bottom: 1rem;
+    width: 60px;
+  }
+  section#contadores{
+    margin-bottom: 6rem;
+  }
+  .contador .buttons{
+    opacity: .3;
+  }
+}

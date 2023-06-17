@@ -1,0 +1,62 @@
+.window{
+  display: none;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,.3);
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+}
+.window.show{
+  display: flex;
+}
+.windowDisplay{
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 6px;
+}
+.windowDisplay form{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px 0;
+}
+.windowDisplay form button{
+  grid-column: span 2;
+}
+.invalid{
+  color: red;
+  font-weight: bold;
+  grid-column: span 2;
+  text-align: center;
+  margin: .2rem 0;
+  border: 2px solid red;
+  padding: .3rem;
+  display: none;
+}
+.invalid.show{
+  display: block;
+}
+.error{
+  border-color: red;
+}
+
+form textarea{
+  resize: none;
+}
+p.data{
+  margin-bottom: .5rem;
+}
+
+.error{
+  border-color: red;
+}
+
+@media (max-width: 700px) {
+  .windowDisplay{
+    width: 80%;
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,132 @@
+/* Estilos gerais */
+:root{
+  font-family: sans-serif;
+}
+body{
+  background-color: rgb(202, 208, 211);
+  margin: 1rem;
+}
+h2{
+  margin: 0;
+  margin-bottom: 1rem;
+}
+h3{
+  margin: 0;
+  margin-bottom: 1rem;
+}
+p{
+  margin: 0;
+}
+/* Estilo do contador */
+.contador{
+  /* border: 2px solid #000; */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,.3);
+  padding: 20px;
+  padding-right: 80px;
+  width: fit-content;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.contador:hover .buttons{
+  opacity: 1;
+}
+#btn-adicionar{
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  z-index: 10;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 100%;
+  width: 70px;
+}
+#btn-deletar{
+  position: fixed;
+  top: 1rem;
+  right: 6rem;
+  font-size: 1.5rem;
+  z-index: 10;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 100%;
+  width: 70px;
+}
+#btn-adicionar,  #btn-deletar, .buttons img{
+  -webkit-user-drag: none;
+  user-select: none;
+}
+.delete, .edit{
+  width: 30px;
+  cursor: pointer;
+  border-radius: 100%;
+}
+.buttons{
+  display: flex;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  flex-direction: column;
+  gap: .5rem;
+  opacity: 0;
+  transition: opacity .3s;
+}
+h1{
+  position: relative;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  transition: text-shadow .5s;
+  cursor: default;
+  margin-bottom: 4rem;
+  width: fit-content;
+}
+h1:hover{
+  text-shadow: 0 0 10px red;
+}
+#titleMore{
+  color: blue;
+  text-shadow: 0 0 10px blue;
+  position: absolute;
+  top: 40px;
+  left: 0;
+}
+#johnny{
+  position: absolute;
+  right: 2rem;
+  bottom: 1rem;
+  width: 200px;
+  border-radius: 6px;
+  -webkit-user-drag: none;
+  transition: transform 1s;
+  z-index: 10;
+  pointer-events: all;
+}
+#johnny:hover{
+  transform: rotate(3600deg);
+}
+#logo{
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+
+@media (max-width:700px) {
+  #logo{
+    display: none;
+  }
+  h1:hover{
+    text-shadow: none;
+  }
+  #titleMore{
+    top: 80px;
+  }
+}

@@ -3,58 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 
   <title>Contador de dias do Johnny</title>
 </head>
 <body>
-  <h1>Contador de dias do Johnny</h1>
+  <h1>Contador de dias do Johnny<span id="titleMore">Paradise Update</span></h1>
+
+  <div id="logo"><img src="img/johnny.jpg" alt="Foto do Johnny" id="johnny"></div>
+  
 
   <img src="img/add.svg" alt="Adicionar" id="btn-adicionar">
   <img src="img/deleteAll.svg" alt="Deletar" id="btn-deletar"></img>
 
-  <div id="tela-adicionar">
-    <div id="tela">
+  <div id="tela-adicionar" class="window">
+    <div class="windowDisplay">
       <form name="adicionar-contador">
         <label for="title">Título:</label>
-        <input type="text" name="title">
+        <input type="text" name="title" id="title">
 
         <label for="data">Data:</label>
-        <input type="date" name="date">
+        <input type="date" name="date" id="date">
 
         <label for="description">Descrição:</label>
         <textarea name="description" cols="30" rows="8"></textarea>
 
-        <span id="invalido"></span>
+        <span class="invalid"></span>
 
         <button>Adicionar</button>
       </form>
     </div>
   </div>
 
-  <div id="tela-editar">
-    <div id="tela">
+  <div id="tela-editar" class="window">
+    <div class="windowDisplay">
+      <h3>Editar informações</h3>
       <form name="editar-contador">
         <label for="title">Título:</label>
-        <input type="text" name="title">
+        <input type="text" name="title" id="title">
 
         <label for="data">Data:</label>
-        <input type="date" name="date">
+        <input type="date" name="date" id="date">
 
         <label for="description">Descrição:</label>
         <textarea name="description" cols="30" rows="8"></textarea>
 
-        <span id="invalido"></span>
+        <span class="invalid"></span>
 
         <button name="ok">OK</button>
       </form>
     </div>
   </div>
 
-  <section id="contadores">
-    
-  </section>
+  <section id="contadores"></section>
 
 </body>
-<script src="js/script.js"></script>
+<script src="main.js"></script>
 </html>
