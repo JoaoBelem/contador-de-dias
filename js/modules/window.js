@@ -39,6 +39,8 @@ export default class CriarWindow {
     this.handleWindowClasses = this.handleWindowClasses.bind(this);
 
     this.storageInfo = new StorageInfo();
+
+    this.init();
   }
 
   // Torna a window visível
@@ -62,8 +64,6 @@ export default class CriarWindow {
   handleWindowClasses(e) {
     if (e.target === this.windowElement) {
       this.removeWindow();
-      // this.windowElement.classList.remove('show');
-      // this.windowElement.removeEventListener('click', this.handleWindowClasses);
     }
   }
 

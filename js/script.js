@@ -36,7 +36,7 @@ const telaAdicionar = new CriarWindow({
   },
 });
 
-telaAdicionar.init();
+// telaAdicionar.init();
 
 const btnDelete = document.querySelector('#btn-deletar');
 

@@ -95,7 +95,7 @@ export default function CriarContador(titleValue, dateValue, descValue) {
     },
   });
 
-  telaEditar.init();
+  // telaEditar.init();
 
   return div;
 }
