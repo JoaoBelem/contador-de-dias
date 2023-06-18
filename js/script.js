@@ -10,7 +10,9 @@ import CriarContador from './modules/criarContador.js';
 
 const contadoresSection = document.getElementById('contadores');
 
-readInfo();
+if (localStorage.dates) {
+  readInfo();
+}
 
 // Verifica se há algum dado guardado no computador do usuário.
 // Caso não exista, então será criado o storage.
