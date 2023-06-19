@@ -71,7 +71,8 @@ export default class CriarWindow {
   handleSubmit(e) {
     e.preventDefault();
 
-    const title = this.formElement.querySelector('#title');
+    console.log(this.formElement.description.value);
+    const { title, description } = this.formElement;
 
     const checkValues = this.requiredInputs.map((i) => {
       if (i.value) {
@@ -82,14 +83,31 @@ export default class CriarWindow {
 
     // Caso os espaços estejam preenchidos
     if (checkValues.every((i) => i === true)) {
-      // Caso exista algum caractére inválido
-      if (title.value.match(/[\\|]/g)) {
-        title.classList.add('error');
-        this.invalidMsg.classList.add('show');
-        this.invalidMsg.innerHTML = 'Carácteres inválidos: &#92;, |';
+      this.requiredInputs.forEach((element) => {
+        if (!element.value) {
+          element.classList.add('error');
+          setTimeout(() => {
+            element.classList.remove('error');
+          }, 5000);
+        }
+      });
 
+      description.classList.remove('error');
+      // Caso exista algum caractére inválido
+      if (title.value.match(/[\\|]/g) || description.value.match(/[\\|]/g)) {
+        if (title.value.match(/[\\|]/g)) {
+          title.classList.add('error');
+          this.invalidMsg.classList.add('show');
+          this.invalidMsg.innerHTML = 'Carácteres inválidos: &#92;, |';
+        }
+        if (description.value.match(/[\\|]/g)) {
+          description.classList.add('error');
+          this.invalidMsg.classList.add('show');
+          this.invalidMsg.innerHTML = 'Carácteres inválidos: &#92;, |';
+        }
         setTimeout(() => {
           title.classList.remove('error');
+          description.classList.remove('error');
           this.invalidMsg.classList.remove('show');
           this.invalidMsg.innerText = '';
         }, 5000);
@@ -98,7 +116,6 @@ export default class CriarWindow {
       else {
         this.action(this.openBtn);
 
-        // this.windowElement.classList.remove('show');
         this.removeWindow();
         this.formElement.reset();
       }

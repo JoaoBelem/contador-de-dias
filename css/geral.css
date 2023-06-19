@@ -87,11 +87,17 @@ h1:hover{
   text-shadow: 0 0 10px red;
 }
 #titleMore{
+  opacity: 0;
   color: blue;
   text-shadow: 0 0 10px blue;
   position: absolute;
-  top: 40px;
-  left: 0;
+  top: 50vh;
+  right: 1rem;
+  cursor: default;
+  user-select: none;
+}
+#titleMore:hover{
+  opacity: 1;
 }
 #johnny{
   position: absolute;
@@ -125,6 +131,6 @@ h1:hover{
     text-shadow: none;
   }
   #titleMore{
-    top: 80px;
+    display: none;
   }
 }
